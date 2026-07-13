@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Jagannath Rath Yatra"
+version = "1.0.0"
+id = "artifacts/rath-yatra"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23487
+
+[services.development]
+run = "pnpm --filter @workspace/rath-yatra run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rath-yatra", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/rath-yatra/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23487"
+BASE_PATH = "/"

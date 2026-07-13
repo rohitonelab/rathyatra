@@ -1,0 +1,2 @@
+- [Lenis + GSAP ScrollTrigger](lenis-gsap-scrolltrigger.md) — Lenis smooth-scroll must be wired into ScrollTrigger.update via gsap.ticker or scroll-reveal sections silently never animate in.
+- [Screenshot tool tall-viewport artifact](screenshot-tall-viewport-caveat.md) — a static screenshot at scroll=0 can't reveal scroll-triggered content; don't diagnose it as a rendering bug.

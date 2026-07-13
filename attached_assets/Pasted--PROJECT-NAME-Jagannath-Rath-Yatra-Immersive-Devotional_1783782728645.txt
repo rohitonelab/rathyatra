@@ -1,0 +1,462 @@
+# PROJECT NAME
+Jagannath Rath Yatra – Immersive Devotional Experience
+
+# OBJECTIVE
+
+Create an ultra-premium devotional website centered around the Jagannath Rath Yatra festival. The experience should feel sacred, elegant, cinematic, and respectful—not game-like or cartoonish.
+
+The homepage combines:
+
+1. A fully interactive 3D Jagannath Rath (left side)
+2. Live YouTube Darshan (right side)
+3. Premium sponsor placements
+4. Festival ambience
+5. Mobile-first responsive layout
+
+The emotional goal should be:
+
+"Wow...this feels like participating in Rath Yatra."
+
+Use modern premium web design similar to Apple + luxury museum websites, but infused with Indian devotional aesthetics.
+
+--------------------------------------------------------
+
+## TECHNOLOGY
+
+React
+Next.js
+Tailwind CSS
+Three.js
+React Three Fiber
+GSAP
+Framer Motion
+Lenis Smooth Scroll
+Howler.js for audio
+Lottie where required
+
+Performance should remain extremely smooth.
+
+--------------------------------------------------------
+
+## COLOR PALETTE
+
+Primary Background
+#FFD54A
+
+Secondary
+#FFC107
+
+Accent Orange
+#F57C00
+
+Temple Red
+#B71C1C
+
+Gold
+#FFD700
+
+White
+#FFFDF7
+
+Dark Brown
+#4E342E
+
+Very soft gradients.
+
+Everything should feel warm.
+
+No modern blue colors.
+
+--------------------------------------------------------
+
+## TYPOGRAPHY
+
+Elegant serif headings
+
+Devotional Sanskrit-inspired headings
+
+Clean sans font for UI
+
+Premium spacing
+
+--------------------------------------------------------
+
+## HERO SECTION LAYOUT
+
+Entire viewport.
+
+Split into two sections.
+
+LEFT = 50%
+
+RIGHT = 50%
+
+--------------------------------------------------------
+
+LEFT SECTION
+
+This section is the heart of the website.
+
+Background:
+
+Golden-yellow gradient
+
+Temple atmosphere
+
+Soft sunlight
+
+Floating dust particles
+
+Flower petals
+
+Very subtle smoke
+
+Soft bloom
+
+The 3D Jagannath Rath occupies almost the entire left section.
+
+The model should be based on the real Jagannath Rath from Puri. Use publicly available reference images only as visual reference for modeling and proportions—do not copy copyrighted images as textures.
+
+Large wooden wheels.
+
+Authentic canopy.
+
+Detailed carvings.
+
+Traditional ropes.
+
+Wood texture.
+
+Temple flags.
+
+Cloth simulation.
+
+Realistic materials.
+
+--------------------------------------------------------
+
+INTERACTION
+
+A thick sacred rope comes out toward the user.
+
+Desktop:
+
+Click and drag.
+
+Mobile:
+
+Touch and drag.
+
+While dragging:
+
+The rope stretches naturally.
+
+The chariot slowly begins moving.
+
+Large wooden wheels rotate.
+
+Suspension slightly shakes.
+
+Decorative flags flutter.
+
+Temple bells begin ringing.
+
+Dust rises.
+
+Flower petals become more intense.
+
+Devotees chant softly.
+
+Drums increase.
+
+Conch shell ambience.
+
+The harder the user pulls,
+
+the stronger all animations become.
+
+When released,
+
+rope settles with realistic physics.
+
+Momentum slowly decreases.
+
+--------------------------------------------------------
+
+SUCCESS MOMENT
+
+After sufficient pulling:
+
+Camera slightly zooms in.
+
+Flowers rain.
+
+Temple bells.
+
+Golden particles.
+
+A devotional message appears:
+
+🙏
+You have symbolically participated
+in the sacred Rath Yatra.
+
+May Lord Jagannath bless you.
+
+A glowing button:
+
+Share your participation
+
+Generate share card.
+
+--------------------------------------------------------
+
+BACKGROUND ATMOSPHERE
+
+Subtle temple chants
+
+Birds
+
+Wind
+
+Temple bells
+
+Conch shell
+
+Nothing loud.
+
+Should feel meditative.
+
+--------------------------------------------------------
+
+RIGHT SECTION
+
+Premium white card with rounded corners.
+
+Glassmorphism.
+
+Very premium.
+
+Contains:
+
+LIVE DARSHAN
+
+Embedded YouTube Live Player
+
+Responsive 16:9 ratio.
+
+Use official YouTube embed.
+
+No custom player.
+
+--------------------------------------------------------
+
+Around this live player reserve premium sponsor inventory.
+
+TOP
+
+One horizontal sponsor
+
+728x90
+
+Label:
+
+Presented By
+
+--------------------------------------------------------
+
+RIGHT SIDE
+
+Vertical sponsor
+
+300x600
+
+--------------------------------------------------------
+
+BOTTOM
+
+Another premium banner
+
+728x90
+
+--------------------------------------------------------
+
+Sponsors should have beautiful borders.
+
+Golden outlines.
+
+Very premium.
+
+--------------------------------------------------------
+
+Below the player
+
+Current festival status
+
+LIVE indicator
+
+Current location of Rath
+
+Current time
+
+Today's events
+
+--------------------------------------------------------
+
+HEADER
+
+Transparent initially.
+
+Blur after scrolling.
+
+Contains
+
+Logo
+
+Jagannath
+
+Home
+
+Live Darshan
+
+Rath Experience
+
+History
+
+Festival
+
+Sponsors
+
+--------------------------------------------------------
+
+BACKGROUND EFFECTS
+
+Soft moving gradients
+
+Golden particles
+
+Bloom
+
+Volumetric light
+
+Floating petals
+
+Temple flags moving
+
+Subtle smoke
+
+--------------------------------------------------------
+
+SCROLLING
+
+GSAP animations.
+
+Everything smooth.
+
+Parallax.
+
+Premium easing.
+
+--------------------------------------------------------
+
+MICROINTERACTIONS
+
+Buttons lift slightly.
+
+Cards glow.
+
+Hover effects.
+
+Golden shimmer.
+
+Petals react.
+
+Cursor becomes sacred rope icon while hovering over rope.
+
+--------------------------------------------------------
+
+LOADER
+
+Temple bell.
+
+Golden glow.
+
+Logo appears.
+
+Soft chant.
+
+Loading progress.
+
+--------------------------------------------------------
+
+FOOTER
+
+Temple-inspired.
+
+Deep orange.
+
+Donation button.
+
+Festival information.
+
+Social links.
+
+Sponsor logos.
+
+--------------------------------------------------------
+
+RESPONSIVENESS
+
+Desktop:
+
+Exactly 50/50 split.
+
+Tablet:
+
+55/45 split.
+
+Mobile:
+
+Stack vertically.
+
+3D Rath first.
+
+Live stream second.
+
+Sponsors remain visible but not intrusive.
+
+--------------------------------------------------------
+
+ACCESSIBILITY
+
+Keyboard navigation.
+
+Reduced motion support.
+
+High performance.
+
+Lazy loading.
+
+Optimized Three.js rendering.
+
+--------------------------------------------------------
+
+IMPORTANT
+
+The overall feeling should be:
+
+Sacred.
+
+Respectful.
+
+Premium.
+
+Immersive.
+
+Cinematic.
+
+Emotionally moving.
+
+It should feel like a digital pilgrimage rather than a casual web page.
+
+Avoid anything cartoonish, flashy, or disrespectful. The design should honor the cultural and religious significance of the Rath Yatra while delivering a world-class interactive web experience.

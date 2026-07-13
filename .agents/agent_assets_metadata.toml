@@ -1,0 +1,26 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "9H3ZVTG2VgT3O4XzB57YP"
+uri = "file://artifacts/rath-yatra/public/audio/success.mp3"
+type = "audio"
+title = "success blessing"
+
+[[outputs]]
+id = "yfZ1_eItzp6oB4svbpeLw"
+uri = "file://artifacts/rath-yatra/public/audio/chant.mp3"
+type = "audio"
+title = "devotee chant"
+
+[[outputs]]
+id = "MNgoMXnUEoV2zWbQJwGyk"
+uri = "file://artifacts/rath-yatra/public/audio/bells.mp3"
+type = "audio"
+title = "temple bells"
+
+[[outputs]]
+id = "Ci7QL7TGUrjTr3eb259GQ"
+uri = "file://artifacts/rath-yatra/public/audio/wheels.mp3"
+type = "audio"
+title = "wooden wheels"
