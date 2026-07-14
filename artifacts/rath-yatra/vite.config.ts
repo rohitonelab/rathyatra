@@ -14,18 +14,18 @@ export default defineConfig({
     react(),
     tailwindcss(),
     ...(process.env.NODE_ENV !== 'production' &&
-    process.env.REPL_ID !== undefined
+      process.env.REPL_ID !== undefined
       ? [
-          (await import('@replit/vite-plugin-runtime-error-modal')).default(),
-          await import('@replit/vite-plugin-cartographer').then((m) =>
-            m.cartographer({
-              root: path.resolve(import.meta.dirname, '..'),
-            }),
-          ),
-          await import('@replit/vite-plugin-dev-banner').then((m) =>
-            m.devBanner(),
-          ),
-        ]
+        (await import('@replit/vite-plugin-runtime-error-modal')).default(),
+        await import('@replit/vite-plugin-cartographer').then((m) =>
+          m.cartographer({
+            root: path.resolve(import.meta.dirname, '..'),
+          }),
+        ),
+        await import('@replit/vite-plugin-dev-banner').then((m) =>
+          m.devBanner(),
+        ),
+      ]
       : []),
   ],
   resolve: {
@@ -44,6 +44,16 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, 'dist'),
     emptyOutDir: true,
+    // Split vendor code into its own chunk for better caching
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
   },
   server: {
     port,
