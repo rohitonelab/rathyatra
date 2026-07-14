@@ -2,7 +2,6 @@ import { useEffect, Suspense } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Analytics } from '@vercel/analytics/react';
 import { Header, Footer } from './components/HeaderFooter';
 import { Loader } from './components/Loader';
 import Home from './pages/Home';
@@ -43,7 +42,6 @@ function App() {
         <Home />
       </Suspense>
       <Footer />
-      <Analytics />
     </div>
   );
 }
