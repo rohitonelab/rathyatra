@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useDrag } from '@use-gesture/react';
 import { Share2, ArrowDown, RotateCcw, Lock } from 'lucide-react';
 import { RathScene } from '../components/RathScene';
+import WhatsAppShare from '../components/WhatsAppShare';
 import { pullState, audioManager, usePullState, getDevoteeTier } from '../store';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -28,20 +29,20 @@ function SuccessOverlay() {
                     onClick={handleDismiss}
                 >
                     <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
-                    <motion.div 
+                    <motion.div
                         initial={{ scale: 0.9, y: 20 }}
                         animate={{ scale: 1, y: 0 }}
                         transition={{ type: 'spring', damping: 20, delay: 0.2 }}
                         onClick={(e) => e.stopPropagation()}
                         className="glass-card p-8 md:p-12 rounded-3xl text-center max-w-md mx-auto relative shadow-[0_20px_60px_rgba(183,28,28,0.3)] border border-[#FFD700]/50"
                     >
-                        <motion.div 
+                        <motion.div
                             initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5, type: 'spring' }}
                             className="w-20 h-20 bg-gradient-to-br from-[#FFD54A] to-[#F57C00] rounded-full mx-auto mb-6 flex items-center justify-center shadow-inner"
                         >
                             <span className="text-4xl text-white">🙏</span>
                         </motion.div>
-                        
+
                         <h3 className="font-serif text-3xl md:text-4xl text-[#B71C1C] mb-4">जय जगन्नाथ!</h3>
                         <p className="font-sans text-lg text-[#4E342E] mb-6 leading-relaxed">
                             आपने पवित्र रथ यात्रा में सांकेतिक रूप से भाग लिया है। भगवान जगन्नाथ आपको शांति और समृद्धि का आशीर्वाद दें।
@@ -72,7 +73,7 @@ function SuccessOverlay() {
                                 </div>
                             )}
                         </motion.div>
-                        
+
                         <div className="flex flex-col gap-3">
                             <button
                                 onClick={handleDismiss}
@@ -103,7 +104,7 @@ function LiveDarshanCard() {
                     <span className="w-2 h-2 rounded-full bg-white animate-ping" /> लाइव
                 </span>
             </div>
-            
+
             <div className="aspect-video w-full bg-black rounded-2xl overflow-hidden shadow-inner relative border border-[#4E342E]/20">
                 <iframe
                     width="100%" height="100%"
@@ -115,7 +116,7 @@ function LiveDarshanCard() {
                     className="absolute inset-0"
                 ></iframe>
             </div>
-            
+
             <div className="mt-6 flex flex-col gap-4 font-sans text-sm text-[#4E342E]">
                 <div className="flex justify-between items-center border-b border-[#4E342E]/10 pb-3">
                     <span className="font-semibold uppercase tracking-widest text-xs opacity-70">स्थान</span>
@@ -128,7 +129,7 @@ function LiveDarshanCard() {
                 <div className="flex justify-between items-center">
                     <span className="font-semibold uppercase tracking-widest text-xs opacity-70">स्थानीय समय</span>
                     <span className="font-medium">
-                        {new Date().toLocaleTimeString('hi-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute:'2-digit' })} IST
+                        {new Date().toLocaleTimeString('hi-IN', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit' })} IST
                     </span>
                 </div>
             </div>
@@ -187,7 +188,7 @@ function Hero() {
         } else if (!dragging) {
             pullState.velocity = 0;
         }
-        
+
         if (pullState.progress >= 100 && !pullState.success) {
             pullState.success = true;
             pullState.recordPull();
@@ -202,7 +203,7 @@ function Hero() {
             <div className="w-full md:w-[50%] lg:w-[55%] h-[60vh] md:h-screen relative shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F57C00]/10 to-[#B71C1C]/40 mix-blend-overlay pointer-events-none z-10" />
                 <RathScene />
-                
+
                 {/* Drag Interaction Overlay */}
                 <div {...(isLive ? bind() : {})} className={`absolute inset-0 z-20 touch-none flex flex-col justify-end items-center pb-12 md:pb-24 ${isLive ? 'cursor-grab active:cursor-grabbing' : 'cursor-not-allowed'}`}>
                     {/* Prayer emojis rising from the rope while it's being pulled */}
@@ -259,18 +260,18 @@ function Hero() {
                                 </p>
                             </motion.div>
                         ) : !success && (
-                            <motion.div 
+                            <motion.div
                                 key="pull-prompt"
                                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9 }}
                                 className="flex flex-col items-center gap-4"
                             >
                                 <div className="text-[#4E342E] bg-white/60 backdrop-blur-md px-6 py-3 rounded-full font-sans text-xs md:text-sm tracking-[0.2em] uppercase shadow-xl animate-pulse flex items-center gap-3 border border-white/40">
-                                    <ArrowDown className="w-4 h-4 text-[#B71C1C]" /> 
+                                    <ArrowDown className="w-4 h-4 text-[#B71C1C]" />
                                     रथ खींचने के लिए नीचे खींचें
                                 </div>
                                 {/* Progress Indicator */}
                                 <div className="w-48 h-1.5 bg-black/20 rounded-full overflow-hidden">
-                                    <div 
+                                    <div
                                         className="h-full bg-gradient-to-r from-[#FFC107] to-[#B71C1C] transition-all duration-75"
                                         style={{ width: `${progress}%` }}
                                     />
@@ -285,7 +286,7 @@ function Hero() {
                         )}
                     </AnimatePresence>
                 </div>
-                
+
                 <SuccessOverlay />
             </div>
 
@@ -306,6 +307,9 @@ function Hero() {
                         <span className="text-[10px] font-sans text-gray-400 absolute top-2 left-3 uppercase tracking-widest">स्ट्रीमिंग पार्टनर</span>
                         <div className="font-sans font-bold text-base sm:text-lg md:text-xl text-[#B71C1C] mt-3 tracking-widest text-center">ओड़िया लाइव मीडिया</div>
                     </div>
+
+                    {/* WhatsApp Share – isolated, safe, no side-effects */}
+                    <WhatsAppShare />
                 </div>
             </div>
         </section>
@@ -320,7 +324,7 @@ function BelowHero() {
             if (!el) return;
             gsap.fromTo(el,
                 { y: 60, opacity: 0 },
-                { 
+                {
                     y: 0, opacity: 1, duration: 1.2, ease: 'power3.out',
                     scrollTrigger: { trigger: el, start: 'top 85%' }
                 }
@@ -337,7 +341,7 @@ function BelowHero() {
     return (
         <div className="bg-[#FFFDF7] w-full z-20 relative font-sans text-[#4E342E] overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[200px] bg-gradient-to-b from-[#FFD54A]/20 to-transparent pointer-events-none" />
-            
+
             <section id="history" ref={addToRefs} className="py-24 md:py-32 px-6 md:px-12 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h4 className="text-[#F57C00] font-sans text-sm font-bold uppercase tracking-[0.3em] mb-4">विरासत</h4>
@@ -368,11 +372,11 @@ function BelowHero() {
                         <h4 className="text-[#F57C00] font-sans text-sm font-bold uppercase tracking-[0.3em] mb-4">अनुष्ठान</h4>
                         <h2 className="text-4xl md:text-5xl font-serif text-[#4E342E]">महोत्सव कार्यक्रम</h2>
                     </div>
-                    
+
                     <div className="flex flex-col gap-6 relative">
                         {/* Timeline line */}
                         <div className="absolute left-[27px] md:left-1/2 top-4 bottom-4 w-[2px] bg-[#FFC107]/50 -translate-x-1/2" />
-                        
+
                         {[
                             { time: "सुबह 06:00", title: "मंगल आरती", desc: "देवी-देवताओं का जागरण और प्रकाश की पहली शुभ भेंट।" },
                             { time: "सुबह 09:30", title: "पहंडी बिजे", desc: "वह भव्य शोभायात्रा जिसमें देवताओं को लयबद्ध रूप से झूमते हुए उनके-उनके रथों तक ले जाया जाता है।" },
@@ -392,7 +396,7 @@ function BelowHero() {
                     </div>
                 </div>
             </section>
-            
+
         </div>
     );
 }
