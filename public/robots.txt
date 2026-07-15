@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.json
+Disallow: /dist/
+
+# Sitemaps
+Sitemap: https://rathyatra.rohitonelab.com/sitemap.xml
+Sitemap: https://rathyatra.rohitonelab.com/sitemap-hi.xml
+
+# Crawl delay for heavy crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
