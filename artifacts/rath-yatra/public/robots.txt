@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://rathyatra-y69e.vercel.app/sitemap.xml
